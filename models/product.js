@@ -32,7 +32,7 @@ module.exports = class Product {
         const existingProductIndex = products.findIndex(
           (prod) => prod.id === this.id
         );
-        const updatedProducts = {...products};
+        const updatedProducts = { ...products };
         updatedProducts[existingProductIndex] = this;
       }
       this.id = Math.random().toString();
