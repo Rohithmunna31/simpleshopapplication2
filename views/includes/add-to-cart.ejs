@@ -2,3 +2,8 @@
   <button class="btn" type="submit">Add to Cart</button>
   <input type="hidden" name="productId" value="<%= product.Id %>" />
 </form>
+
+<form action="/delete" method="get">
+  <button class="btn">Delete</button>
+  <input type="hidden" name="productId" value="<%= product.Id %>" />
+</form>

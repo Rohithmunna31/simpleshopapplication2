@@ -56,3 +56,20 @@ exports.getProducts = (req, res, next) => {
     });
   });
 };
+
+exports.deleteproduct = (req, res) => {
+  const prodId = req.params.productId;
+
+  Product.deleteproduct(prodId)
+    .then(() => console.log("successfull deleted"))
+    .catch((err) => console.log(err));
+
+  res.render("admin/Products", {
+    pageTitle: "Delete product",
+    path: "/",
+    editing: false,
+    formsCSS: true,
+    productCSS: true,
+    activeAddProduct: true,
+  });
+};
